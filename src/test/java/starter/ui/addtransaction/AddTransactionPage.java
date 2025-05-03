@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class AddTransactionPage {
-    public static Target BUTTON_ADD_TRANSACTION = Target.the("Add transaction button").locatedBy("//button[contains(text(),'Añadir transacción')]");
+    public static Target BUTTON_ADD_TRANSACTION = Target.the("Add transaction button").locatedBy("//button[@data-target='#transactionModal']");
     public static Target INPUT_DATE = Target.the("Date input").located(By.id("date"));
     public static Target INPUT_AMOUNT = Target.the("Amount input").located(By.id("amount"));
     public static Target INPUT_DESCRIPTION = Target.the("Description input").located(By.id("description"));
