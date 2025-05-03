@@ -1,0 +1,17 @@
+Feature: Registration
+
+
+  Scenario Outline: Successful registration
+    Given Pepito wants to sign up in the application
+    When Pepito sends the require information to sign up
+      | <name> | <last name> | <age> | <country> | <email> |
+    Then Pepito should have a new account created
+    Examples:
+      | name   | last name | age | country  | email                   |
+      | Ximena | Medina    | 26  | Colombia | medinaximena98@gmai.com |
+      | Xime   | Pruebas   | 27  | Colombia | medinaximena@gmai.com   |
+
+  Scenario: Missing required fields for registration
+    Given Pepito wants to sign up in the application
+    When Pepito does not send the required information
+    Then Pepito should be told all fields are required
